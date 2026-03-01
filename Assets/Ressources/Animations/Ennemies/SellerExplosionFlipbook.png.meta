@@ -1,0 +1,286 @@
+fileFormatVersion: 2
+guid: ee42cbf9c1809464bba26299cf682a66
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1721003341928245143
+    second: SellerExplosionFlipbook_0
+  - first:
+      213: 4960113639750548796
+    second: SellerExplosionFlipbook_1
+  - first:
+      213: 6199039931064977036
+    second: SellerExplosionFlipbook_2
+  - first:
+      213: -4239237818877211688
+    second: SellerExplosionFlipbook_3
+  - first:
+      213: -4389131818287907209
+    second: SellerExplosionFlipbook_4
+  - first:
+      213: -2339386457682721478
+    second: SellerExplosionFlipbook_5
+  - first:
+      213: 6893450615355299507
+    second: SellerExplosionFlipbook_6
+  - first:
+      213: -7559908872334386450
+    second: SellerExplosionFlipbook_7
+  - first:
+      213: 70154212394557083
+    second: SellerExplosionFlipbook_8
+  - first:
+      213: 4099956200632755321
+    second: SellerExplosionFlipbook_9
+  - first:
+      213: -2763256357961163719
+    second: SellerExplosionFlipbook_10
+  - first:
+      213: -2389971065943303896
+    second: SellerExplosionFlipbook_11
+  - first:
+      213: -244083920294942487
+    second: SellerExplosionFlipbook_12
+  - first:
+      213: -1649244106093948381
+    second: SellerExplosionFlipbook_13
+  - first:
+      213: 5512477386950132577
+    second: SellerExplosionFlipbook_14
+  - first:
+      213: 9211246578825007018
+    second: SellerExplosionFlipbook_15
+  - first:
+      213: 4650599198816219935
+    second: SellerExplosionFlipbook_16
+  - first:
+      213: 3429955140807775983
+    second: SellerExplosionFlipbook_17
+  - first:
+      213: -2002024906330988815
+    second: SellerExplosionFlipbook_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SellerExplosionFlipbook_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 322
+        height: 618
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9685b1b2494cd18e0800000000000000
+      internalID: -1721003341928245143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SellerExplosionFlipbook_4
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 0
+        width: 333
+        height: 618
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77eb59aaddba613c0800000000000000
+      internalID: -4389131818287907209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SellerExplosionFlipbook_10
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 0
+        width: 322
+        height: 618
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93c92689bf0f6a9d0800000000000000
+      internalID: -2763256357961163719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: d4cbaa058fed96a49b60c1ddb57c6400
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SellerExplosionFlipbook_0: -1721003341928245143
+      SellerExplosionFlipbook_1: 4960113639750548796
+      SellerExplosionFlipbook_10: -2763256357961163719
+      SellerExplosionFlipbook_11: -2389971065943303896
+      SellerExplosionFlipbook_12: -244083920294942487
+      SellerExplosionFlipbook_13: -1649244106093948381
+      SellerExplosionFlipbook_14: 5512477386950132577
+      SellerExplosionFlipbook_15: 9211246578825007018
+      SellerExplosionFlipbook_16: 4650599198816219935
+      SellerExplosionFlipbook_17: 3429955140807775983
+      SellerExplosionFlipbook_18: -2002024906330988815
+      SellerExplosionFlipbook_19: 2088371452
+      SellerExplosionFlipbook_2: 6199039931064977036
+      SellerExplosionFlipbook_3: -4239237818877211688
+      SellerExplosionFlipbook_4: -4389131818287907209
+      SellerExplosionFlipbook_5: -2339386457682721478
+      SellerExplosionFlipbook_6: 6893450615355299507
+      SellerExplosionFlipbook_7: -7559908872334386450
+      SellerExplosionFlipbook_8: 70154212394557083
+      SellerExplosionFlipbook_9: 4099956200632755321
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

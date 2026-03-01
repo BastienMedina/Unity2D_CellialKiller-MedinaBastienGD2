@@ -1,0 +1,69 @@
+using UnityEngine;
+
+public abstract class Enemy : MonoBehaviour
+{
+    [SerializeField] protected float _speed = 3f;
+    [SerializeField] protected int _hp = 3;
+    [SerializeField] private int _damages = 1;
+    [SerializeField] private float _damagesRate = 2f;
+    
+
+    protected Transform _player;
+    private float _curentTimer;
+    protected bool _isAttacking = false;
+
+    protected virtual void Start()
+    {
+        _player = GameObject.FindGameObjectWithTag("Player").transform;
+    }
+
+    protected virtual void TakeDamage(int damage)
+    {
+        _hp -= damage;
+        if (_hp <= 0)
+        {
+            Die();
+        }
+    }
+
+    protected virtual void Die()
+    {
+        Destroy(gameObject);
+    }
+
+    protected virtual void OnTriggerEnter2D(Collider2D collider)
+    {
+        GameObject col = collider.gameObject;
+
+        if (col.CompareTag("Player"))
+        {
+            _isAttacking = true;
+        }
+    }
+
+    protected virtual void OnTriggerStay2D(Collider2D collider)
+    {
+        GameObject col = collider.gameObject;
+
+        if (col.CompareTag("Player"))
+        {
+            _curentTimer += Time.deltaTime;
+            if (_curentTimer >= _damagesRate)
+            {
+                _curentTimer = 0;
+                col.GetComponent<PlayerArcade>().TakeDamages(_damages);
+            }
+        }
+    }
+
+    protected virtual void OnTriggerExit2D(Collider2D collider)
+    {
+        GameObject col = collider.gameObject;
+
+        if (col.CompareTag("Player"))
+        {
+            _curentTimer = 0;
+            _isAttacking = false;
+        }
+    }
+}
