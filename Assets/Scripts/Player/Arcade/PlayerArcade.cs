@@ -13,6 +13,7 @@ public class PlayerArcade : MonoBehaviour
     public void TakeDamages(int damages) //Applique des dégâts au joueur
     {
         _hp -= damages;
+        GameObject.Find("Main Camera").GetComponent<ShakeAnimation>().LaunchShake(0.2f, 0.15f, 25f);
         if (_hp <= 0) //Si la vie tombe à 0 ou moins
         {
             Die(); //Le joueur meurt
