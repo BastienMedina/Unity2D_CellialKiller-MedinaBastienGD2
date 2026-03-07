@@ -19,7 +19,6 @@ GameObject:
   - component: {fileID: 6384493616553242486}
   - component: {fileID: 9049130622707234887}
   - component: {fileID: 874386175637588279}
-  - component: {fileID: 4962432412482149123}
   m_Layer: 0
   m_Name: PlayerGAW
   m_TagString: Untagged
@@ -277,17 +276,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadNewScene
   _loadScene: Scene_MainMenu
   _exitObject: {fileID: 0}
---- !u!114 &4962432412482149123
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4211675543251581986}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b811e8b55c171974f9d689ff5641eb33, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HighScoreManager
-  _highScores: {fileID: 11400000, guid: 6092e29044c4a1c44976cb43dc56ae99, type: 2}
-  _score: {fileID: 11400000, guid: c1bb770c80d70934e96fc2b7d10f861e, type: 2}
+  _loadTransition: {fileID: 0}

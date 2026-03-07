@@ -35,7 +35,6 @@ public class SpawnerManagerGAW : MonoBehaviour
                 Destroy(_spawnPointList[i]); //Détruit tous les points de spawn
             }
             GetComponent<LoadNewScene>().LoadScene(); //Charge la nouvelle scène
-            GetComponent<HighScoreManager>().SetHigh(); //Enregistre le highscore
             Destroy(gameObject); //Détruit ce manager
         }
 

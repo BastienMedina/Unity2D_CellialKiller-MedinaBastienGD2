@@ -16,7 +16,6 @@ public class AddCrossError : MonoBehaviour
         if (_totalErrors >= _maxErrors) //Si le nombre d'erreurs n'a pas atteint le maximum
         {
             GetComponent<LoadNewScene>().LoadScene(); 
-            GetComponent<HighScoreManager>().SetHigh(); 
         }
     }
 
