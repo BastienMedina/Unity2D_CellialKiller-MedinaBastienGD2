@@ -7434,6 +7434,7 @@ GameObject:
   - component: {fileID: 1556337043}
   - component: {fileID: 1556337045}
   - component: {fileID: 1556337044}
+  - component: {fileID: 1556337046}
   m_Layer: 5
   m_Name: Play_Text
   m_TagString: Untagged
@@ -7560,6 +7561,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1556337042}
   m_CullTransparentMesh: 1
+--- !u!114 &1556337046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556337042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5438e2caa7d425f4cb655e420b48d9b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScaleAnimation
+  _intensity: 0.5
+  _speed: 1
+  _doOnce: 0
 --- !u!1 &1749901743
 GameObject:
   m_ObjectHideFlags: 0
