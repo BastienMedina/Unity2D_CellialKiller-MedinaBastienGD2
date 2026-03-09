@@ -8,4 +8,9 @@ public class PlayerMouvements : MonoBehaviour
     {
         transform.position += dir * _speed * Time.deltaTime;
     }
+
+    public void IncreaseSpeed()
+    {
+        _speed += 1f;
+    }
 }

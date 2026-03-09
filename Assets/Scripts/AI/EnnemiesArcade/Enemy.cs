@@ -6,6 +6,8 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] protected int _hp = 3;
     [SerializeField] private int _damages = 1;
     [SerializeField] private float _damagesRate = 2f;
+    [SerializeField] private float _maxHp = 100f;
+    [SerializeField] private float _Hp = 2f;
     
 
     protected Transform _player;
@@ -15,12 +17,22 @@ public abstract class Enemy : MonoBehaviour
     protected virtual void Start()
     {
         _player = GameObject.FindGameObjectWithTag("Player").transform;
+        _Hp = _maxHp;
     }
 
-    protected virtual void TakeDamage(int damage)
+    public virtual void TakeDamage(int damage)
     {
         _hp -= damage;
         if (_hp <= 0)
+        {
+            Die();
+        }
+    }
+
+    public virtual void TakeDamages(float damage)
+    {
+        _Hp -= damage;
+        if (_Hp <= 0)
         {
             Die();
         }

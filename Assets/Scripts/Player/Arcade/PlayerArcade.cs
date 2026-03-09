@@ -24,4 +24,14 @@ public class PlayerArcade : MonoBehaviour
     {
         GetComponent<LoadNewScene>().LoadScene();
     }
+
+    public void RestoreLife()
+    {
+        _hp = _maxHp;
+    }
+
+    public void IncreaseMaxLife()
+    {
+        _maxHp += 1;
+    }
 }

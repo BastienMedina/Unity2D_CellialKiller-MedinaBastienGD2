@@ -8916,8 +8916,52 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4907057351604621940, guid: f95bfb00c9aa4784a8bcb46c352fc35c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 857767158}
   m_SourcePrefab: {fileID: 100100000, guid: f95bfb00c9aa4784a8bcb46c352fc35c, type: 3}
+--- !u!1 &857767157 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4907057351604621940, guid: f95bfb00c9aa4784a8bcb46c352fc35c, type: 3}
+  m_PrefabInstance: {fileID: 857767156}
+  m_PrefabAsset: {fileID: 0}
+--- !u!58 &857767158
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857767157}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 1.5
 --- !u!1 &882939513
 GameObject:
   m_ObjectHideFlags: 0
@@ -9164,20 +9208,88 @@ MonoBehaviour:
   - upgradeAction:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: 
-          m_MethodName: 
-          m_Mode: 0
+        - m_Target: {fileID: 1450917334}
+          m_TargetAssemblyTypeName: UpgradeSurvivor, Assembly-CSharp
+          m_MethodName: Life
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: 
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-    upgradeTitle: 
-    upgradeDesc: 
+    upgradeTitle: Life
+    upgradeDesc: Restore your life
+  - upgradeAction:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1450917334}
+          m_TargetAssemblyTypeName: UpgradeSurvivor, Assembly-CSharp
+          m_MethodName: MaxLife
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    upgradeTitle: Max Life
+    upgradeDesc: Increase you maximum life
+  - upgradeAction:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1450917334}
+          m_TargetAssemblyTypeName: UpgradeSurvivor, Assembly-CSharp
+          m_MethodName: Phone
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    upgradeTitle: Max Phone Quantity
+    upgradeDesc: Increase you maximum phone quantity
+  - upgradeAction:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1450917334}
+          m_TargetAssemblyTypeName: UpgradeSurvivor, Assembly-CSharp
+          m_MethodName: Speed
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    upgradeTitle: Speed
+    upgradeDesc: Increase your speed
+  - upgradeAction:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1450917334}
+          m_TargetAssemblyTypeName: UpgradeSurvivor, Assembly-CSharp
+          m_MethodName: Speed
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    upgradeTitle: Speed
+    upgradeDesc: Increase your speed
   btnData:
   - bouton: {fileID: 1542269677}
     titleText: {fileID: 1359661082}
@@ -9475,6 +9587,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1359661080}
   m_CullTransparentMesh: 1
+--- !u!1 &1450917333
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1450917335}
+  - component: {fileID: 1450917334}
+  m_Layer: 0
+  m_Name: UpgradesManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1450917334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450917333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcf3bbe4cb0f2de4f9203ca7c3da5a06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UpgradeSurvivor
+--- !u!4 &1450917335
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450917333}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1615352186}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1488186636
 GameObject:
   m_ObjectHideFlags: 0
@@ -9693,6 +9849,7 @@ Transform:
   m_Children:
   - {fileID: 1721853820}
   - {fileID: 735757687}
+  - {fileID: 1450917335}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1721853819
