@@ -22,20 +22,26 @@ public class Seller : Enemy
 
     void Update() // Gère le comportement chaque frame
     {
-        if (_player == null) // Si pas de joueur ciblé
+        if (_player == null)
         {
-            WalkAnim(true);
+            WalkAnim(false);
             return;
         }
 
-        _isFleeing = _sellerManager.NeedFlee(); // Vérifie si le vendeur doit fuir
+        if (_isAttacking) // Si l'ennemi attaque
+        {
+            WalkAnim(false); // stop animation de marche
+            return; // stop déplacement
+        }
 
-        if (_isFleeing) // Si doit fuir
+        _isFleeing = _sellerManager.NeedFlee();
+
+        if (_isFleeing)
         {
             Flee();
             WalkAnim(true);
         }
-        else // Sinon attaque
+        else
         {
             Attack();
             WalkAnim(true);

@@ -12,11 +12,13 @@ public class AutoAttacker : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
+        
         if (collider.CompareTag("Enemy"))
         {
+            enemiesInRange.Add(collider.gameObject);
             if (enemiesInRange.Count == 1)
             {
-                enemiesInRange.Add(collider.gameObject);
+                Debug.LogWarning("col enter");
                 InvokeRepeating(nameof(Attack), 0f, _interval);
             }
         }
@@ -38,7 +40,8 @@ public class AutoAttacker : MonoBehaviour
     {
         if (enemiesInRange.Count  > 0)
         {
-            foreach(GameObject enemy in enemiesInRange)
+            Debug.Log("attack auto !!");
+            foreach (GameObject enemy in enemiesInRange)
             {
                 enemy.GetComponent<Enemy>().TakeDamages(_damages);
             }

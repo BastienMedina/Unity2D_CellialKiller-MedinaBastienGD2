@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: 8321289589454143945}
   m_Layer: 0
   m_Name: Enemy_Seller
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -202,6 +202,8 @@ MonoBehaviour:
   _hp: 3
   _damages: 1
   _damagesRate: 2
+  _maxHp: 2
+  _Hp: 2
 --- !u!114 &8405757702914603711
 MonoBehaviour:
   m_ObjectHideFlags: 0

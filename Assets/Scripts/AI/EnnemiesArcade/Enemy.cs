@@ -3,7 +3,6 @@ using UnityEngine;
 public abstract class Enemy : MonoBehaviour
 {
     [SerializeField] protected float _speed = 3f;
-    [SerializeField] protected int _hp = 3;
     [SerializeField] private int _damages = 1;
     [SerializeField] private float _damagesRate = 2f;
     [SerializeField] private float _maxHp = 100f;
@@ -18,15 +17,6 @@ public abstract class Enemy : MonoBehaviour
     {
         _player = GameObject.FindGameObjectWithTag("Player").transform;
         _Hp = _maxHp;
-    }
-
-    public virtual void TakeDamage(int damage)
-    {
-        _hp -= damage;
-        if (_hp <= 0)
-        {
-            Die();
-        }
     }
 
     public virtual void TakeDamages(float damage)

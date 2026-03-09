@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 8739079306347154444}
   m_Layer: 0
   m_Name: GuardEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,9 +111,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Guard
   _speed: 1
-  _hp: 3
   _damages: 2
   _damagesRate: 2
+  _maxHp: 100
+  _Hp: 2
 --- !u!114 &7331389267475150104
 MonoBehaviour:
   m_ObjectHideFlags: 0

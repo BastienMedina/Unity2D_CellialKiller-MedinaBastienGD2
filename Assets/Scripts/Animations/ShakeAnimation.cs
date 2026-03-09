@@ -41,6 +41,5 @@ public class ShakeAnimation : MonoBehaviour
         _force = force;
         _speed = speed;
         _currentTimer = duration;
-        Debug.Log("Shake");
     }
 }
