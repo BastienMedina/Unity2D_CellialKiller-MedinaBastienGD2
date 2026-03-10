@@ -26,9 +26,10 @@ public class SetUpgradeButton : MonoBehaviour
 
     [SerializeField] private UpgradeData[] upgData;
     [SerializeField] private ButtonData[] btnData;
+    [SerializeField] private SurvivorScoreManager _scoreManager;
 
     private int[] _randomUpg;
-    private List<int> _randUpg;
+    private List<int> _randUpg = new List<int>();
 
     void Start()
     {
@@ -69,6 +70,6 @@ public class SetUpgradeButton : MonoBehaviour
 
     public void ReplayGame()
     {
-        FindFirstObjectByType<SurvivorScoreManager>().RemoveUpgrades();
+        _scoreManager.RemoveUpgrades();
     }
 }

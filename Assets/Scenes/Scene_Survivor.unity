@@ -9388,6 +9388,7 @@ MonoBehaviour:
   _scoreSlider: {fileID: 840605565}
   _scoreCount: {fileID: 11400000, guid: 8bbb76600d4ec804e9ced65db802a001, type: 2}
   _goal: 5
+  _scoreManager: {fileID: 735757688}
 --- !u!1001 &857767156
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9864,6 +9865,7 @@ MonoBehaviour:
   - bouton: {fileID: 410347077}
     titleText: {fileID: 2004710630}
     descText: {fileID: 451137817}
+  _scoreManager: {fileID: 735757688}
 --- !u!1 &962507601
 GameObject:
   m_ObjectHideFlags: 0

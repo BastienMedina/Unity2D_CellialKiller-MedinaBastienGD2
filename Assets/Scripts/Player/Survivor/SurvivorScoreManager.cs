@@ -19,7 +19,6 @@ public class SurvivorScoreManager : MonoBehaviour
         SetVisibility(true, _upgradePanel);
         SetVisibility(false, _scoreSlider.GetComponent<CanvasGroup>());
         Time.timeScale = 0f;
-        Debug.Log("Upgrades");
     }
 
     public void SetVisibility(bool visible, CanvasGroup item)
@@ -40,8 +39,10 @@ public class SurvivorScoreManager : MonoBehaviour
 
     public void RemoveUpgrades()
     {
+        Time.timeScale = 1f;
         SetVisibility(false, _upgradePanel);
         SetVisibility(true, _scoreSlider.GetComponent<CanvasGroup>());
-        Time.timeScale = 1f;
+        _scoreSlider.GetComponent<SetProgressBar>().UpgradeGoal();
+        _scoreSlider.GetComponent<SetProgressBar>().SetInUpgrade();
     }
 }
