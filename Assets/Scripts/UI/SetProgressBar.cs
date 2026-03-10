@@ -7,6 +7,12 @@ public class SetProgressBar : MonoBehaviour
     [SerializeField] private ScoresCount _scoreCount;
     [SerializeField] private int _goal = 5;
 
+    void Start()
+    {
+        _scoreSlider.minValue = 0;
+        _scoreSlider.maxValue = _goal;
+    }
+
     void Update()
     {
         SetPercent();
@@ -17,8 +23,9 @@ public class SetProgressBar : MonoBehaviour
         _scoreSlider.value = _scoreCount.Score;
         if (_scoreCount.Score >= _goal)
         {
+            GameObject.FindObjectByType<SurvivorScoreManager>().OpenUpgrade();
+            Debug.LogWarning("Goal");
             UpgradeGoal();
-            FindFirstObjectByType<SurvivorScoreManager>().OpenUpgrade();
         }
     }
 

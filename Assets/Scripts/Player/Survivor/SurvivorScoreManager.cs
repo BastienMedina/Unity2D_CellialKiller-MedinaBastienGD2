@@ -19,6 +19,7 @@ public class SurvivorScoreManager : MonoBehaviour
         SetVisibility(true, _upgradePanel);
         SetVisibility(false, _scoreSlider.GetComponent<CanvasGroup>());
         Time.timeScale = 0f;
+        Debug.Log("Upgrades");
     }
 
     public void SetVisibility(bool visible, CanvasGroup item)
