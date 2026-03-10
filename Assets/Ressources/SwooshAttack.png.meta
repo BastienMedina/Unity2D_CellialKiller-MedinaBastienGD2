@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 9490064ddc86ea64b9ed4d9deb1078fc
+guid: 46e80a3b1a40b4542b8cf08aa164249f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1235264723182015605
-    second: ClientMenWalkFlipbook_0
-  - first:
-      213: 4082381200524989943
-    second: ClientMenWalkFlipbook_1
-  - first:
-      213: -5560727161660640467
-    second: ClientMenWalkFlipbook_2
+      213: -2594395729367383511
+    second: SwooshAttack_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -132,67 +126,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ClientMenWalkFlipbook_0
+      name: SwooshAttack_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 3
-        width: 252
-        height: 538
+        x: 0
+        y: 0
+        width: 171
+        height: 92
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 574d5d498ba842110800000000000000
-      internalID: 1235264723182015605
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ClientMenWalkFlipbook_1
-      rect:
-        serializedVersion: 2
-        x: 518
-        y: 3
-        width: 252
-        height: 538
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7f5560f821887a830800000000000000
-      internalID: 4082381200524989943
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ClientMenWalkFlipbook_2
-      rect:
-        serializedVersion: 2
-        x: 1001
-        y: 3
-        width: 252
-        height: 538
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d23f954cb1454d2b0800000000000000
-      internalID: -5560727161660640467
+      spriteID: 922444074dadefbd0800000000000000
+      internalID: -2594395729367383511
       vertices: []
       indices: 
       edges: []
@@ -201,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: edc3617faea12aa4bb6a49f218506248
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -211,9 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ClientMenWalkFlipbook_0: 1235264723182015605
-      ClientMenWalkFlipbook_1: 4082381200524989943
-      ClientMenWalkFlipbook_2: -5560727161660640467
+      SwooshAttack_0: -2594395729367383511
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

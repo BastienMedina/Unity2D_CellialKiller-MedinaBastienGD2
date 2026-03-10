@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b8a2bab4a5d9774ab69ec0ea08c6020, type: 3}
   m_Name: ScoreSurvivor
   m_EditorClassIdentifier: Assembly-CSharp::ScoresCount
-  Score: 1
+  Score: 0

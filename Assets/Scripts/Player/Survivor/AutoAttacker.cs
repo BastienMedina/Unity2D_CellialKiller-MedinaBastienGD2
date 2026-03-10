@@ -5,6 +5,7 @@ public class AutoAttacker : MonoBehaviour
 {
     [SerializeField] private float _interval = 3.5f;
     [SerializeField] private float _damages = 10f;
+    [SerializeField] private GameObject _swooshPrefab;
 
     private List<GameObject> enemiesInRange = new List<GameObject>();
 
@@ -18,6 +19,9 @@ public class AutoAttacker : MonoBehaviour
             if (enemiesInRange.Count == 1)
             {
                 InvokeRepeating(nameof(Attack), 0f, _interval);
+                GameObject swosh = Instantiate(_swooshPrefab, transform.position);
+                swosh.GetComponent<FlipBookAnimation>().ActivateFlipbook(true);
+                Destroy(swosh, 0.45f);
             }
         }
     }
