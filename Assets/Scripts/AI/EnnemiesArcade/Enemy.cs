@@ -32,6 +32,7 @@ public abstract class Enemy : MonoBehaviour
 
     protected virtual void Die()
     {
+        GetComponent<ScaleAnimation>().ActivateScale();
         Destroy(gameObject);
     }
 

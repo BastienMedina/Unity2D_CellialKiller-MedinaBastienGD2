@@ -14,7 +14,6 @@ public class AutoAttacker : MonoBehaviour
     {
         if (collider.tag == "Enemy")
         {
-            Debug.LogWarning("col enter");
             enemiesInRange.Add(collider.gameObject);
             if (enemiesInRange.Count == 1)
             {
@@ -37,11 +36,20 @@ public class AutoAttacker : MonoBehaviour
 
     void Attack()
     {
-        if (enemiesInRange.Count  > 0)
+        if (enemiesInRange.Count > 0)
         {
             Debug.Log("attack auto !!");
-            foreach (GameObject enemy in enemiesInRange)
+
+            for (int i = enemiesInRange.Count - 1; i >= 0; i--)
             {
+                GameObject enemy = enemiesInRange[i];
+
+                if (enemy == null)
+                {
+                    enemiesInRange.RemoveAt(i);
+                    continue;
+                }
+
                 enemy.GetComponent<Enemy>().TakeDamages(_damages);
             }
         }
