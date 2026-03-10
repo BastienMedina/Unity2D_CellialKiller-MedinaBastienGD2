@@ -199,11 +199,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Seller
   _speed: 3
-  _hp: 3
   _damages: 1
   _damagesRate: 2
   _maxHp: 2
   _Hp: 2
+  _xpPrefab: {fileID: 1574855732462361145, guid: b5e6079823259114380ffc7be602feda, type: 3}
 --- !u!114 &8405757702914603711
 MonoBehaviour:
   m_ObjectHideFlags: 0

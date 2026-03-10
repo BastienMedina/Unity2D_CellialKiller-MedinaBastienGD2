@@ -7,6 +7,7 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] private float _damagesRate = 2f;
     [SerializeField] private float _maxHp = 100f;
     [SerializeField] private float _Hp = 2f;
+    [SerializeField] private GameObject _xpPrefab;
     
 
     protected Transform _player;
@@ -25,6 +26,7 @@ public abstract class Enemy : MonoBehaviour
         if (_Hp <= 0)
         {
             Die();
+            Instantiate(_xpPrefab, transform.position, transform.rotation);
         }
     }
 

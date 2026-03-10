@@ -115,6 +115,7 @@ MonoBehaviour:
   _damagesRate: 2
   _maxHp: 100
   _Hp: 2
+  _xpPrefab: {fileID: 1574855732462361145, guid: b5e6079823259114380ffc7be602feda, type: 3}
 --- !u!114 &7331389267475150104
 MonoBehaviour:
   m_ObjectHideFlags: 0

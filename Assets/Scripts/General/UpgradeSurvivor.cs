@@ -19,12 +19,12 @@ public class UpgradeSurvivor : MonoBehaviour
 
     public void Rate()
     {
-        GameObject.FindWithTag("Player").GetComponent<AutoAttacker>().DecreaseInterval();
+        GameObject.FindWithTag("Cable").GetComponent<AutoAttacker>().DecreaseInterval();
     }
 
     public void Damages()
     {
-        GameObject.FindWithTag("Player").GetComponent<AutoAttacker>().IncreaseDamages();
+        GameObject.FindWithTag("Cable").GetComponent<AutoAttacker>().IncreaseDamages();
     }
 
     public void Phone()

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ExitAI
   - Enemy
+  - Cable
   layers:
   - Default
   - TransparentFX
