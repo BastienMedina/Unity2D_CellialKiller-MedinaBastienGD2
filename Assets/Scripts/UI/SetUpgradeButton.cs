@@ -48,6 +48,7 @@ public class SetUpgradeButton : MonoBehaviour
             data.bouton.onClick.RemoveAllListeners();
             data.bouton.onClick.AddListener(() => upgData[upgId].upgradeAction?.Invoke());
             data.bouton.onClick.AddListener(ReplayGame);
+            id++;
         }
     }
 

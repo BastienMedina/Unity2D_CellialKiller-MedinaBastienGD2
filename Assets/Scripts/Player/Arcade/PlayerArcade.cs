@@ -25,7 +25,7 @@ public class PlayerArcade : MonoBehaviour
 
     void Die() //Charge la scène de mort ou de fin
     {
-        GetComponent<LoadNewScene>().LoadScene();
+        GameObject.Find("LooseScreen").GetComponent<LooseUI>().RemoveAllUi();
     }
 
     public void RestoreLife()

@@ -10,7 +10,7 @@ public class LoadNewScene : MonoBehaviour
     public void LoadScene() //Instancie l'effet de transition avant de charger la sc�ne
     {
         Instantiate(_loadTransition);
-        Time.timeScale = 0;
+        //Time.timeScale = 0.1f;
         Invoke(nameof(Load), 1f);
     }
 
@@ -20,6 +20,7 @@ public class LoadNewScene : MonoBehaviour
 
         if (col.name == _exitObject.name) //Si l'objet touch� est l'exit, lance le chargement
         {
+            Debug.LogWarning("Exit");
             LoadScene();
         }
     }

@@ -6,33 +6,26 @@ public class PlayerMouvementsGAW : MonoBehaviour
 
     private int _playerPosIndex = 0;
 
-    void Start() //Déplace le joueur à la position de départ
+    void Start()
     {
         Move(_playerPosIndex);
     }
 
-    public void MoveLeft() //Déplace le joueur vers la gauche si possible
+    public void MoveLeft()
     {
-        if (_playerPosIndex > 0) //Vérifie que le joueur n'est pas déjà à l'extrême gauche
-        {
-            int tempID = _playerPosIndex - 1;
-            Move(tempID);
-        }
+        if (_playerPosIndex > 0)
+            Move(_playerPosIndex - 1);
     }
 
-    public void MoveRight() //Déplace le joueur vers la droite si possible
+    public void MoveRight()
     {
-        if (_playerPosIndex < _playerPosList.Length - 1) //Vérifie que le joueur n'est pas déjà à l'extrême droite
-        {
-            int tempID = _playerPosIndex + 1;
-            Move(tempID);
-        }
+        if (_playerPosIndex < _playerPosList.Length - 1)
+            Move(_playerPosIndex + 1);
     }
 
-    void Move(int id) //Déplace le joueur à la position id
+    void Move(int id)
     {
-        Vector3 newPos = _playerPosList[id].position;
-        transform.position = newPos;
+        transform.position = _playerPosList[id].position;
         _playerPosIndex = id;
     }
 } 

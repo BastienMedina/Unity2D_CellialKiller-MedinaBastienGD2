@@ -13,6 +13,7 @@ public abstract class Enemy : MonoBehaviour
     protected Transform _player;
     private float _curentTimer;
     protected bool _isAttacking = false;
+    protected bool _isAlive = true;
 
     protected virtual void Start()
     {
@@ -23,7 +24,7 @@ public abstract class Enemy : MonoBehaviour
     public virtual void TakeDamages(float damage)
     {
         _Hp -= damage;
-        if (_Hp <= 0)
+        if (_Hp <= 0 && _isAlive)
         {
             Die();
             Instantiate(_xpPrefab, transform.position, transform.rotation);
@@ -32,6 +33,7 @@ public abstract class Enemy : MonoBehaviour
 
     protected virtual void Die()
     {
+        _isAlive = false;
         GetComponent<ScaleAnimation>().ActivateScale();
         Destroy(gameObject);
     }

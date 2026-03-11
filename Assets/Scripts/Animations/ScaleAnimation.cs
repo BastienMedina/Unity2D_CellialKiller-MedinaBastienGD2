@@ -4,75 +4,83 @@ public class ScaleAnimation : MonoBehaviour
 {
     [Header("Animation presets")]
     [SerializeField] private float _intensity = 0.5f;
-    [SerializeField] private float _speed = 1f;
+    [SerializeField] private float _speed = 2f;
     [SerializeField] private bool _doOnce = false;
+
     private float _initScale;
     private float _maxScale;
+
     private bool _ended = false;
     private bool _isActive = false;
 
-    void Update() //Applique l'animation si active
+    void Start()
     {
-        if (!_isActive) //Si l'animation est inactive, ne fait rien
+        _initScale = transform.localScale.x;
+        _maxScale = _initScale + _intensity;
+
+        // si on ne veut pas doOnce  animation en continu
+        if (!_doOnce)
         {
-            return;
+            _isActive = true;
         }
+    }
+
+    void Update()
+    {
+        if (!_isActive) return;
+
         ScaleAnim();
     }
 
-    void ScaleAnim() //Gère l'augmentation et la diminution du scale
+    void ScaleAnim()
     {
-        if (_initScale <= 0) //Si le scale initial n'est pas défini
+        if (_ended)
         {
-            _initScale = transform.localScale.x;
-            _maxScale = _initScale + _intensity;
+            RemoveScale();
         }
         else
         {
-            if (_ended) //Si l'animation descend
-            {
-                RemoveScale();
-                if (transform.localScale.x <= _initScale) //Si le scale est revenu à l'initial
-                {
-                    _ended = false;
-                }
-            }
-            else //Si l'animation monte
-            {
-                AddScale();
-                if (transform.localScale.x >= _maxScale) //Si le scale a atteint le max
-                {
-                    _ended = true;
-                }
-            }
+            AddScale();
         }
     }
 
-    void AddScale() //Augmente le scale
+    void AddScale()
     {
         float newScale = transform.localScale.x + Time.deltaTime * _speed;
-        Vector3 scaleVec = new Vector3(newScale, newScale, newScale);
-        transform.localScale = scaleVec;
+        transform.localScale = new Vector3(newScale, newScale, newScale);
+
+        if (newScale >= _maxScale)
+        {
+            _ended = true;
+        }
     }
 
-    void RemoveScale() //Diminue le scale
+    void RemoveScale()
     {
         float newScale = transform.localScale.x - Time.deltaTime * _speed;
-        Vector3 scaleVec = new Vector3(newScale, newScale, newScale);
-        transform.localScale = scaleVec;
+        transform.localScale = new Vector3(newScale, newScale, newScale);
 
-        if (transform.localScale.x <= _initScale) //Si retour au scale initial et doOnce activé, désactive animation
+        if (newScale <= _initScale)
         {
+            transform.localScale = new Vector3(_initScale, _initScale, _initScale);
+            _ended = false;
+
+            // si mode doOnce  stop après un cycle
             if (_doOnce)
             {
                 _isActive = false;
-                _ended = false;
             }
         }
     }
 
-    public void ActivateScale() //Active l'animation de scale
+    public void ActivateScale()
     {
+        if (!_doOnce) return;
+
+        _initScale = transform.localScale.x;
+        _maxScale = _initScale + _intensity;
+
+        _ended = false;
         _isActive = true;
     }
 

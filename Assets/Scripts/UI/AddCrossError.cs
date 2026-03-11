@@ -12,6 +12,7 @@ public class AddCrossError : MonoBehaviour
     {
         _totalErrors++;
         Instantiate(_crossPrefab, _errorContainer); //Ajoute une croix
+        Debug.LogWarning("Cross");
 
         if (_totalErrors >= _maxErrors) //Si le nombre d'erreurs n'a pas atteint le maximum
         {
