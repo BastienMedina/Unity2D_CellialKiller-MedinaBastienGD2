@@ -60,7 +60,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AutoAttacker
   _interval: 3.5
   _damages: 10
-  _swooshPrefab: {fileID: 7683769674756857220, guid: 33ccd69c1d97db74ba912ed86786b09e, type: 3}
+  _swooshPrefab: {fileID: 1346270983428130349, guid: d8e471b756a52834a8f48fadbc3cfcf1, type: 3}
 --- !u!58 &990156476117814154
 CircleCollider2D:
   m_ObjectHideFlags: 0

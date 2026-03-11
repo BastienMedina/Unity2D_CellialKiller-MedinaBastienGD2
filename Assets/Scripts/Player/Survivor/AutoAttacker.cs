@@ -19,9 +19,6 @@ public class AutoAttacker : MonoBehaviour
             if (enemiesInRange.Count == 1)
             {
                 InvokeRepeating(nameof(Attack), 0f, _interval);
-                GameObject swosh = Instantiate(_swooshPrefab, transform.position);
-                swosh.GetComponent<FlipBookAnimation>().ActivateFlipbook(true);
-                Destroy(swosh, 0.45f);
             }
         }
     }
@@ -55,6 +52,9 @@ public class AutoAttacker : MonoBehaviour
                 }
 
                 enemy.GetComponent<Enemy>().TakeDamages(_damages);
+                GameObject swosh = Instantiate(_swooshPrefab, transform.position, Quaternion.identity);
+                swosh.GetComponentInChildren<FlipBookAnimation>().ActivateFlipbook(true);
+                Destroy(swosh, 0.1f);
             }
         }
     }
