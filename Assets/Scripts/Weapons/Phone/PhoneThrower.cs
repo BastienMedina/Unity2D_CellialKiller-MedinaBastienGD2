@@ -9,13 +9,17 @@ public class PhoneThrower : MonoBehaviour
 
     private Camera _cam;
 
-    void Start() // Récupère la caméra principale
+    void Start() // Rï¿½cupï¿½re la camï¿½ra principale
     {
         _cam = Camera.main;
     }
 
-    public void ThrowPhone(Vector2 ScreenPos) // Instancie et lance un téléphone vers la position donnée
+    public void ThrowPhone(Vector2 ScreenPos) // Instancie et lance un tï¿½lï¿½phone vers la position donnï¿½e
     {
+        if (Time.timeScale == 0)
+        {
+            return;
+        }
         if (_phoneStock > 0)
         {
             Vector3 worldPos = _cam.ScreenToWorldPoint(ScreenPos);
@@ -25,7 +29,13 @@ public class PhoneThrower : MonoBehaviour
 
             Vector2 dir = (worldPos - transform.position).normalized;
 
-            phone.GetComponent<Rigidbody2D>().AddForce(dir * _throwForce, ForceMode2D.Impulse); // Applique la force pour lancer le téléphone
+            phone.GetComponent<Rigidbody2D>().AddForce(dir * _throwForce, ForceMode2D.Impulse); // Applique la force pour lancer le tï¿½lï¿½phone
+            _phoneStock--;
+        }
+        else if (_phoneStock == 0)
+        {
+            GetComponent<PhoneManager>().RingAllPhone();
+            Debug.Log("Explosion");
             _phoneStock--;
         }
     }
@@ -34,5 +44,15 @@ public class PhoneThrower : MonoBehaviour
     {
         _maxPhoneStock += 2;
         _phoneStock = _maxPhoneStock;
+    }
+
+    public int GetMaxPhone()
+    {
+        return _maxPhoneStock;
+    }
+
+    public int GetCurrentPhoneStock()
+    {
+        return _phoneStock;
     }
 }

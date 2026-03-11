@@ -11,43 +11,37 @@ public class ExplosionAnimation : MonoBehaviour
     private int _frameID = 0;
     private float _currentTimer;
 
-    void Start() //Récupère le sprite renderer
+    void Start() //Rï¿½cupï¿½re le sprite renderer
     {
         _spriteRend = GetComponent<SpriteRenderer>();
     }
 
-    void ChangeFrame() //Change de frame et détruit si fin
+    void ChangeFrame() //Change de frame et dï¿½truit si fin
     {
         if (_end)
+    {
+        _frameID--;
+        if (_frameID < 0)
         {
-            _frameID--;
-            if (_frameID > 1)
-            {
-                _spriteRend.sprite = _framesList[_frameID];
-            }
-            else
-            {
-                _spriteRend.sprite = _framesList[_frameID];
-                _end = false;
-            }
+            _frameID = 0;
+            _end = false;
         }
-        else
+    }
+    else
+    {
+        _frameID++;
+        if (_frameID >= _framesList.Length)
         {
-            _frameID++;
-            if (_frameID < _framesList.Length - 1)
-            {
-                _spriteRend.sprite = _framesList[_frameID];
-            }
-            else
-            {
-                _spriteRend.sprite = _framesList[_frameID];
-                _end = true;
-                Destroy(gameObject); //Détruit l'objet à la fin de l'explosion
-            }
+            _frameID = _framesList.Length - 1;
+            _end = true;
+            Destroy(gameObject);
         }
     }
 
-    void Update() //Gère le timer pour l'animation
+    _spriteRend.sprite = _framesList[_frameID];
+    }
+
+    void Update() //Gï¿½re le timer pour l'animation
     {
         if (_activated)
         {
@@ -55,7 +49,7 @@ public class ExplosionAnimation : MonoBehaviour
         }
     }
 
-    void Timer() //Incrémente timer et change frame
+    void Timer() //Incrï¿½mente timer et change frame
     {
         _currentTimer += Time.deltaTime;
         if (_currentTimer >= _frameRate)
@@ -65,7 +59,7 @@ public class ExplosionAnimation : MonoBehaviour
         }
     }
 
-    public void ActivateFlipbook(bool state) //Active/désactive l'animation
+    public void ActivateFlipbook(bool state) //Active/dï¿½sactive l'animation
     {
         if (state == false)
         {

@@ -46,4 +46,9 @@ public class SetProgressBar : MonoBehaviour
         Debug.Log("min :" + _scoreSlider.minValue);
         Debug.Log("max :" + _scoreSlider.maxValue);
     }
+
+    public int GetGoal()
+    {
+        return _goal;
+    }
 }

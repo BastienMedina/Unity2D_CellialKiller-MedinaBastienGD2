@@ -6,9 +6,11 @@ public class SurvivorScoreManager : MonoBehaviour
     [SerializeField] private ScoresCount _scoreCount;
     [SerializeField] private Slider _scoreSlider;
     [SerializeField] private CanvasGroup _upgradePanel;
+    [SerializeField] private CanvasGroup _scoreText;
 
     void Start()
     {
+        _scoreCount.Score = 0;
         SetVisibility(false, _upgradePanel);
         SetVisibility(true, _scoreSlider.GetComponent<CanvasGroup>());
     }
@@ -18,6 +20,7 @@ public class SurvivorScoreManager : MonoBehaviour
         FindFirstObjectByType<SetUpgradeButton>().SetAllButton();
         SetVisibility(true, _upgradePanel);
         SetVisibility(false, _scoreSlider.GetComponent<CanvasGroup>());
+        SetVisibility(false, _scoreText);
         Time.timeScale = 0f;
     }
 
@@ -42,6 +45,7 @@ public class SurvivorScoreManager : MonoBehaviour
         Time.timeScale = 1f;
         SetVisibility(false, _upgradePanel);
         SetVisibility(true, _scoreSlider.GetComponent<CanvasGroup>());
+        SetVisibility(true, _scoreText);
         _scoreSlider.GetComponent<SetProgressBar>().UpgradeGoal();
         _scoreSlider.GetComponent<SetProgressBar>().SetInUpgrade();
     }

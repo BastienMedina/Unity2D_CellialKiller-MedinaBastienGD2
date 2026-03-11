@@ -143,7 +143,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &6317458063610419351
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72807970efad1464c8bdd4a7d99b8313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BasicEnemy
-  _speed: 3
+  _speed: 2
   _damages: 1
   _damagesRate: 2
   _maxHp: 20
@@ -297,4 +297,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PhoneReceiver
   _scoreCount: {fileID: 11400000, guid: 8bbb76600d4ec804e9ced65db802a001, type: 2}
-  _scoreValue: 1
+  _scoreValue: 0
