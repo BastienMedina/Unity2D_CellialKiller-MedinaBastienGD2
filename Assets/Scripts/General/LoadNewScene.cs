@@ -7,23 +7,24 @@ public class LoadNewScene : MonoBehaviour
     [SerializeField] private GameObject _exitObject;
     [SerializeField] private GameObject _loadTransition;
 
-    public void LoadScene() //Instancie l'effet de transition avant de charger la scène
+    public void LoadScene() //Instancie l'effet de transition avant de charger la scï¿½ne
     {
         Instantiate(_loadTransition);
+        Time.timeScale = 0;
         Invoke(nameof(Load), 1f);
     }
 
-    void OnTriggerEnter2D(Collider2D collider) //Vérifie si le joueur touche l'objet exit
+    void OnTriggerEnter2D(Collider2D collider) //Vï¿½rifie si le joueur touche l'objet exit
     {
         GameObject col = collider.gameObject;
 
-        if (col.name == _exitObject.name) //Si l'objet touché est l'exit, lance le chargement
+        if (col.name == _exitObject.name) //Si l'objet touchï¿½ est l'exit, lance le chargement
         {
             LoadScene();
         }
     }
 
-    public void Load() //Charge directement la scène définie
+    public void Load() //Charge directement la scï¿½ne dï¿½finie
     {
         SceneManager.LoadScene(_loadScene);
     }
