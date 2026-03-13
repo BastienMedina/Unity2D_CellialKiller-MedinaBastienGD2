@@ -4,6 +4,7 @@ public class InputsManager : MonoBehaviour
 {
     [Header("Mouvements")]
     [SerializeField] private float _minHoldTime = 1.0f;
+    [SerializeField] private FootStepsManager _footsteps;
 
     private PlayerMouvements _mouvementsScript;
     private float _touchTimer;
@@ -14,12 +15,12 @@ public class InputsManager : MonoBehaviour
 
     private FlipBookAnimation _walkAnim;
 
-    void Start() //Initialise les scripts et l’animation
+    void Start() //Initialise les scripts et lï¿½animation
     {
         _walkAnim = GetComponent<FlipBookAnimation>();
         _mouvementsScript = GetComponent<PlayerMouvements>();
         _phoneThrower = GetComponent<PhoneThrower>();
-        if (_phoneThrower == null) //Si PhoneThrower n’est pas assigné
+        if (_phoneThrower == null) //Si PhoneThrower nï¿½est pas assignï¿½
         {
             Debug.LogWarning("Phone thrower est nuuuuullll !!");
         }
@@ -37,7 +38,7 @@ public class InputsManager : MonoBehaviour
     // =========================
     // INPUTS MOBILE (pour inputs sur mobile)
     // =========================
-    void HandleTouchInput() //Gère les touches sur mobile
+    void HandleTouchInput() //Gï¿½re les touches sur mobile
     {
         if (Input.touchCount == 0) //Si aucun toucher
         {
@@ -47,24 +48,24 @@ public class InputsManager : MonoBehaviour
 
         Touch touche = Input.GetTouch(0);
 
-        if (touche.phase == TouchPhase.Began) //Début du toucher
+        if (touche.phase == TouchPhase.Began) //Dï¿½but du toucher
         {
             _startTouchPos = touche.position;
             TouchTimer(false, touche.position);
         }
 
-        if (touche.phase == TouchPhase.Stationary || touche.phase == TouchPhase.Moved) //Maintien ou déplacement du toucher
+        if (touche.phase == TouchPhase.Stationary || touche.phase == TouchPhase.Moved) //Maintien ou dï¿½placement du toucher
         {
             TouchTimer(true, touche.position);
         }
 
         if (touche.phase == TouchPhase.Ended) //Fin du toucher
         {
-            if (_touchTimer < _minHoldTime) //Si le toucher était court
+            if (_touchTimer < _minHoldTime) //Si le toucher ï¿½tait court
             {
-                _phoneThrower.ThrowPhone(touche.position); //Lance le téléphone
+                _phoneThrower.ThrowPhone(touche.position); //Lance le tï¿½lï¿½phone
             }
-            _walkAnim.ActivateFlipbook(false); //Arrête l’animation de marche
+            _walkAnim.ActivateFlipbook(false); //Arrï¿½te lï¿½animation de marche
             _touchTimer = 0f;
         }
     }
@@ -72,11 +73,11 @@ public class InputsManager : MonoBehaviour
     // =========================
     // INPUTS PC (SOURIS) (pour test dev sur PC)
     // =========================
-    void HandleMouseInput() //Gère les inputs souris
+    void HandleMouseInput() //Gï¿½re les inputs souris
     {
         Vector2 mousePos = Input.mousePosition;
 
-        if (Input.GetMouseButtonDown(0)) //Bouton pressé
+        if (Input.GetMouseButtonDown(0)) //Bouton pressï¿½
         {
             _startTouchPos = mousePos;
             _touchTimer = 0f;
@@ -88,18 +89,18 @@ public class InputsManager : MonoBehaviour
 
             if (_touchTimer >= _minHoldTime) //Si maintenu assez longtemps
             {
-                InputMove(mousePos); //Déplace le joueur
-                _walkAnim.ActivateFlipbook(true); //Active l’animation de marche
+                InputMove(mousePos); //Dï¿½place le joueur
+                _walkAnim.ActivateFlipbook(true); //Active lï¿½animation de marche
             }
         }
 
-        if (Input.GetMouseButtonUp(0)) //Bouton relâché
+        if (Input.GetMouseButtonUp(0)) //Bouton relï¿½chï¿½
         {
             if (_touchTimer < _minHoldTime) //Si clic court
             {
-                _phoneThrower.ThrowPhone(mousePos); //Lance le téléphone
+                _phoneThrower.ThrowPhone(mousePos); //Lance le tï¿½lï¿½phone
             }
-            _walkAnim.ActivateFlipbook(false); //Arrête l’animation
+            _walkAnim.ActivateFlipbook(false); //Arrï¿½te lï¿½animation
             _touchTimer = 0f;
         }
     }
@@ -110,23 +111,25 @@ public class InputsManager : MonoBehaviour
         {
             _touchTimer += Time.deltaTime;
 
-            if (_touchTimer >= _minHoldTime) //Si le temps dépasse le minimum
+            if (_touchTimer >= _minHoldTime) //Si le temps dï¿½passe le minimum
             {
-                InputMove(pos); //Déplace le joueur
+                InputMove(pos); //Dï¿½place le joueur
+                _footsteps.UpdateFootsteps(true);
             }
         }
         else //Sinon reset du timer
         {
             _touchTimer = 0f;
+            _footsteps.UpdateFootsteps(false);
         }
     }
 
-    void InputMove(Vector2 pos) //Transforme la position écran en déplacement
+    void InputMove(Vector2 pos) //Transforme la position ï¿½cran en dï¿½placement
     {
         Vector2 worldPos = Camera.main.ScreenToWorldPoint(pos);
         Vector2 dir2D = (worldPos - (Vector2)_mouvementsScript.transform.position).normalized;
 
         Vector3 dir3D = new Vector3(dir2D.x, dir2D.y, 0f);
-        _mouvementsScript.Move(dir3D); //Applique le déplacement
+        _mouvementsScript.Move(dir3D); //Applique le dï¿½placement
     }
 }

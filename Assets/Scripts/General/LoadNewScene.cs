@@ -7,9 +7,14 @@ public class LoadNewScene : MonoBehaviour
     [SerializeField] private GameObject _exitObject;
     [SerializeField] private GameObject _loadTransition;
 
+    [Header("Sound")]
+    [SerializeField] private SoundEffectManager _soundEffects;
+    [SerializeField] private AudioClip _teleportationSound;
+
     public void LoadScene() //Instancie l'effet de transition avant de charger la sc�ne
     {
         Instantiate(_loadTransition);
+        _soundEffects.PlaySound(_teleportationSound);
         //Time.timeScale = 0.1f;
         Invoke(nameof(Load), 0.5f);
     }
