@@ -3,15 +3,11 @@ using UnityEngine;
 public class SpawnRunner : MonoBehaviour
 {
     [Header("Spawn Settings")]
-
-    // Prefab de l'ennemi à faire apparaître
     [SerializeField] private GameObject _enemyPrefab;
-
-    // Temps entre chaque spawn
-    [SerializeField] private float _spawnInterval = 2f;
-
-    // BoxCollider utilisé comme zone de spawn
+    [SerializeField] private float _spawnInterval = 3f;
     [SerializeField] private BoxCollider2D _spawnArea;
+
+    private int _spawnCount = 0;
 
     void Start()
     {
@@ -21,10 +17,10 @@ public class SpawnRunner : MonoBehaviour
 
     void SpawnEnemy()
     {
-        // Récupère les limites de la box
+        // Rï¿½cupï¿½re les limites de la box
         Bounds bounds = _spawnArea.bounds;
 
-        // Choisit une position aléatoire dans la box
+        // Choisit une position alï¿½atoire dans la box
         float randomX = Random.Range(bounds.min.x, bounds.max.x);
         float randomY = Random.Range(bounds.min.y, bounds.max.y);
 
@@ -32,5 +28,11 @@ public class SpawnRunner : MonoBehaviour
 
         // Spawn de l'ennemi
         Instantiate(_enemyPrefab, spawnPos, Quaternion.identity);
+        _spawnCount++;
+        if (_spawnCount >= 5 && _spawnInterval > 1)
+        {
+            _spawnInterval -= 0.3f;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<TimerScore>().AddScoreValue();
+        }
     }
 }

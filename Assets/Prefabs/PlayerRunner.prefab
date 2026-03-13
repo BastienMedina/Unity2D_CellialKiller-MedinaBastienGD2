@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2316774552489541272}
   - component: {fileID: 540803892780316066}
   - component: {fileID: 7228429550211158284}
+  - component: {fileID: 8475450083076334818}
   m_Layer: 0
   m_Name: PlayerRunner
   m_TagString: Player
@@ -210,3 +211,16 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.77, y: 3.61}
   m_EdgeRadius: 0
+--- !u!114 &8475450083076334818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7301979946776715394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af03fd6e56fd0d94d89295da8f8e9276, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TimerScore
+  _score: {fileID: 11400000, guid: 915707113155d184da82260829d84031, type: 2}

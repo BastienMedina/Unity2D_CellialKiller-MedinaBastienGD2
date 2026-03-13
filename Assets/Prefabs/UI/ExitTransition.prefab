@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4aea1bcb869da3545ad361f7208e1de0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TransitionAnimation
-  _duration: 1
+  _duration: 0.5
   _startRadius: 1.5
 --- !u!114 &8421750161342224600
 MonoBehaviour:
@@ -105,6 +105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadNewScene
   _loadScene: Scene_MainMenu
   _exitObject: {fileID: 0}
+  _loadTransition: {fileID: 0}
 --- !u!1 &7566375821833568962
 GameObject:
   m_ObjectHideFlags: 0

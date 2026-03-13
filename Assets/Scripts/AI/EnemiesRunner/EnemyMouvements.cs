@@ -4,7 +4,7 @@ public class EnemyMouvements : MonoBehaviour
 {
     [Header("Vertical Movement")]
 
-    // Vitesse de descente vers le bas de l'écran
+    // Vitesse de descente vers le bas de l'ï¿½cran
     [SerializeField] private float _downSpeed = 4f;
 
     [Header("ZigZag Movement")]
@@ -15,15 +15,15 @@ public class EnemyMouvements : MonoBehaviour
     // Vitesse du zigzag
     [SerializeField] private float _zigzagSpeed = 2f;
 
-    // Position X de départ (centre du zigzag)
+    // Position X de dï¿½part (centre du zigzag)
     private float _startX;
 
-    // Temps utilisé pour calculer le sinus
+    // Temps utilisï¿½ pour calculer le sinus
     private float _time;
 
     void Start()
     {
-        // On enregistre la position X de départ
+        // On enregistre la position X de dï¿½part
         _startX = transform.position.x;
     }
 
@@ -57,7 +57,7 @@ public class EnemyMouvements : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            // Mort du player
+            GameObject.FindWithTag("Finish").GetComponent<LooseUI>().RemoveAllUi();
             Destroy(gameObject);
         }
         else if (collision.gameObject.GetComponent<DestroyExit>() != null)

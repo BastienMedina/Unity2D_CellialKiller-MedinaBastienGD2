@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 6021463988273040538}
   - component: {fileID: 8259985895709039}
   - component: {fileID: 7988531011779345080}
+  - component: {fileID: -5107696334820951554}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -142,6 +143,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PhoneThrower
   _phonePrefab: {fileID: 5000067773402580405, guid: ab4745a2dc266754a8d6c575d74d8a52, type: 3}
   _throwForce: 10
+  _phoneStock: 3
+  _maxPhoneStock: 3
 --- !u!114 &4063600227695269099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,6 +192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerArcade
   _hp: 6
   _maxHp: 6
+  _lifebar: {fileID: 0}
 --- !u!50 &7098607673158520100
 Rigidbody2D:
   serializedVersion: 5
@@ -323,3 +327,15 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.75, y: 1.23}
   m_EdgeRadius: 0
+--- !u!114 &-5107696334820951554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4907057351604621940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5168a2fd180362441b682f482cfc21a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ResetTime

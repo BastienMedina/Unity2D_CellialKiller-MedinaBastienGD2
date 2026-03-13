@@ -11,7 +11,7 @@ public class LoadNewScene : MonoBehaviour
     {
         Instantiate(_loadTransition);
         //Time.timeScale = 0.1f;
-        Invoke(nameof(Load), 1f);
+        Invoke(nameof(Load), 0.5f);
     }
 
     void OnTriggerEnter2D(Collider2D collider) //V�rifie si le joueur touche l'objet exit
