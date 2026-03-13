@@ -572,7 +572,33 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8040992175445703300, guid: 7030d5c061a5ea542ba13a01e65e0d26, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1994994726}
+    - targetCorrespondingSourceObject: {fileID: 8040992175445703300, guid: 7030d5c061a5ea542ba13a01e65e0d26, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1994994727}
+    - targetCorrespondingSourceObject: {fileID: 7054318435352717009, guid: 7030d5c061a5ea542ba13a01e65e0d26, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 508677335}
   m_SourcePrefab: {fileID: 100100000, guid: 7030d5c061a5ea542ba13a01e65e0d26, type: 3}
+--- !u!1 &508677334 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7054318435352717009, guid: 7030d5c061a5ea542ba13a01e65e0d26, type: 3}
+  m_PrefabInstance: {fileID: 508677333}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &508677335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508677334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 924a9356ebe30924cb27dd41d8388827, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoadNewScene
+  _loadScene: Scene_MainMenu
+  _exitObject: {fileID: 0}
+  _loadTransition: {fileID: 7566375821833568962, guid: d654fb563efc4d841963af4cfbe463d3, type: 3}
 --- !u!1 &543339128
 GameObject:
   m_ObjectHideFlags: 0
@@ -3972,6 +3998,21 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &1994994727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994994720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 924a9356ebe30924cb27dd41d8388827, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoadNewScene
+  _loadScene: Scene_MainMenu
+  _exitObject: {fileID: 0}
+  _loadTransition: {fileID: 7566375821833568962, guid: d654fb563efc4d841963af4cfbe463d3, type: 3}
 --- !u!1001 &3365704548845864268
 PrefabInstance:
   m_ObjectHideFlags: 0

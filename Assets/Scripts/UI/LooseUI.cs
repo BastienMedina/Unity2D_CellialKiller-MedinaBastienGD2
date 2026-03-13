@@ -17,7 +17,7 @@ public class LooseUI : MonoBehaviour
         _screen.alpha = 1;
         _screen.blocksRaycasts = true;
         _screen.interactable = true;
-        Time.timeScale = 0;
+        //Time.timeScale = 0;
     }
 
     void Start()

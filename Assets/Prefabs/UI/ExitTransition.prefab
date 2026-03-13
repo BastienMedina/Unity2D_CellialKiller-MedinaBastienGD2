@@ -105,7 +105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LoadNewScene
   _loadScene: Scene_MainMenu
   _exitObject: {fileID: 0}
-  _loadTransition: {fileID: 0}
+  _loadTransition: {fileID: 7566375821833568962}
 --- !u!1 &7566375821833568962
 GameObject:
   m_ObjectHideFlags: 0
